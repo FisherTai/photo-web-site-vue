@@ -1,19 +1,23 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <Nav />
+  <router-view />
+  <Footer />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+import Nav from './components/Nav.vue';
+import Footer from './components/Footer.vue';
 
 export default defineComponent({
   name: 'App',
   components: {
-    HelloWorld
+    Nav,
+    Footer
   }
 });
 </script>
+
 
 <style lang="scss">
 #app {
@@ -22,6 +26,25 @@ export default defineComponent({
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.about,.home_page{
+  min-height: 90vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style-type: none;
 }
 </style>
